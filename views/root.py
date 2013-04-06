@@ -1,6 +1,4 @@
-from flask.views import View
+from views.render_template import RenderTemplateView
 
-class RootView(View):
-
-    def dispatch_request(self):
-        return "Hello"
+class RootView(RenderTemplateView):
+    pass
