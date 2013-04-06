@@ -3,11 +3,9 @@ app = Flask(__name__)
 
 # Docs http://flask.pocoo.org/docs/views/ on this structure type.
 # Configure View URLs.
-from views import RootView, UploadView
+from views import RootView
 app.add_url_rule('/', view_func=RootView.as_view('index',\
     template_name='index.html'))
-
-app.add_url_rule('/upload', view_func=UploadView.as_view('upload'))
 
 # The folder where files will be uploaded.
 import os
