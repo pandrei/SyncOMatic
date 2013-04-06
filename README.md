@@ -12,4 +12,4 @@ How to start:
 
 What it can do (in progress):
 
-* upload a file using the file chooser, and store it in **project/files/`**
+* upload a file using the file chooser, and store it in **project/files/**
