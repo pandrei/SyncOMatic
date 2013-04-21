@@ -8,7 +8,6 @@ class getFileView(RenderTemplateView):
 		super(getFileView, self).__init__(*args, **kwargs)
 	
 	def dispatch_request(self):
-		#here's the problem:
 		self.index = request.args.get('index')
 		from run import app
 		files = os.listdir(app.config['UPLOAD_FOLDER'])
