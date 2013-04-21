@@ -1,10 +1,5 @@
-<!doctype html>
-<html>
-    <head>
-        <title>SyncOMatic</title>
-    <head>
-
-    <body>
+{% extends "base.html" %}
+{% block content %}
         {% if upload_message %}
             <span>{{ upload_message }}<span>
         {% endif %}
@@ -12,5 +7,4 @@
             <p><input type=file name=file>
                <input type=submit value=Upload>
         </form>
-    </body>
-<html>
+{% endblock %}
