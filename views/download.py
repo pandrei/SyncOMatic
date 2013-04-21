@@ -10,4 +10,5 @@ class DownloadView(RenderTemplateView):
 	def dispatch_request(self):
 		from run import app
 		files = os.listdir(app.config['UPLOAD_FOLDER'])
+		files.remove(".hidden")
 		return render_template('download.html', files = files)
