@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 		{% for file in files %}
-		<p>{{file}}<form method="get" action="{{url_for('getFile', index=files.index(file))}}">
+		<p>{{file}}<form method="get" action="{{url_for('getFile')}}">
+		<input type="hidden" name="index" value={{ files.index(file) }} />  
 		<button type="submit">Download</button>
 		</form>
 		</p>
