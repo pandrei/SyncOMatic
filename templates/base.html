@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		{% if title %}
+			<title>SyncOMatic - {{title}}</title>
+		{% else %}
+			<title>SyncOMatic</title>
+		{% endif %}
+	</head>
+	<body>
+		<div>Links: <a href="/">Home</a>
+		<a href="/download">Download</a>
+		</div>
+		<hr>
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>
+	
