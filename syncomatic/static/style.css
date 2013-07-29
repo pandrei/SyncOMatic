@@ -1,0 +1,122 @@
+/* The page layout. */
+body { margin: 0; background-color: #1a1a1a; }
+#wrap { margin: auto; max-width: 1024px; }
+
+
+/* -- HEADER --. */
+.header { position: relative; background-image: url('header_container.jpg'); height: 95px; }
+.header .title { float: left; margin-left: 40px; margin-top: 40px; }
+.header .header_menu { margin-right: 50px; }
+.header li { float: right; margin-right: 40px; margin-top: 30px; }
+.header a { color: #f2f2f2; font-family: Arial; font-size: x-large; }
+
+
+/* -- BODY --. */
+
+/* Index. */
+a.click_here { color: #eabc48; font-size: 36px; font-family: Arial; position: absolute; top: 98px; left: 239px; }
+
+/* Not logged in yet, on index. */
+.not_logged_in_index_container { position: relative; background-image: url('index_container.jpg'); height: 348px; }
+.not_logged_in_index_container a { color: #000; }
+.not_logged_in_index_container button.register { background-color: #f0c454; width: 102px; height: 38px; position: absolute; bottom: 41px; right: 429px; }
+.not_logged_in_index_container button.register span { font-size: 18px; font-weight: bold; position: absolute; bottom: 5px; right: 30px; }
+.not_logged_in_index_container a.login { position: absolute; color: #fff; font-family: Arial; font-size: 14px; bottom: 49px; right: 337px; }
+.not_logged_in_index_container a.login { display: inline-block; padding-left:30px; line-height:11px; background: transparent url('arrow_icon.png') center left no-repeat; }
+
+/* Files after login has been done. */
+.logged_in_index_container { position: relative; height: 452px; background-image: url('files_container.jpg'); }
+.logged_in_index_container span { color: #fff; }
+.logged_in_index_container .logged_in { margin-right: 73px; margin-top: 29px; }
+.logged_in_index_container .sign-out { margin-left: 20px; color: #c3c6c7; font-size: 18px; }
+.logged_in_index_container .sign-out:hover { color: #898e90; }
+.logged_in_index_container .logged_in { float: right; }
+.logged_in_index_container .bottom-buttons { position: absolute; bottom: 15px; left: 52px; }
+.logged_in_index_container #create_folder_button { float: left; font-size: 14px; font-weight: bold; margin-left: 20px; }
+.logged_in_index_container .upload_form { float: left; color: #fff; }
+.logged_in_index_container .upload_form input[type=file] { color: #fff; }
+.logged_in_index_container .upload_form input[type=submit] { font-size: 14px; font-weight: bold; margin-left: 0px; }
+.logged_in_index_container .upload_form input[type=submit] { display: inline-block; padding-left:20px; line-height:16px; background: transparent url('upload_icon.png') center left no-repeat; }
+/* Current path directory. */
+.logged_in_index_container .current_path { position: absolute; font-size: 30px; font-family: Verdana, Arial; color: #d1b875; top: 22px; left: 52px; }
+/* Files table. */
+.logged_in_index_container table { position: absolute; top: 90px; left: 51px; width: 906px; border-collapse:collapse; }
+.logged_in_index_container table tbody { height: 272px; overflow: auto; }
+.logged_in_index_container tbody, .logged_in_index_container thead > tr { display: block; }
+.logged_in_index_container table td { width: 250px; font-size: 18px; color: #fff; }
+.logged_in_index_container table thead tr { height: 25px; }
+.logged_in_index_container table thead td { padding-left: 60px; }
+.logged_in_index_container table tr { height: 34px; }
+.logged_in_index_container table tr.dark { background-color: #1b1b3e; }
+.logged_in_index_container table tr.light { background-color: #35357a; }
+.logged_in_index_container table .buttons_container .button { float: left; }
+.logged_in_index_container table .buttons_container .button input[type=submit] { font-size: 14px; }
+.logged_in_index_container table .buttons_container .button input[type=button] { font-size: 14px; }
+.logged_in_index_container table .buttons_container { width: 300px; }
+.logged_in_index_container table tbody td.folder_file a { color: #eabc48; font-weight: bold; }
+/* Icons for download, delete, new folder. */
+.logged_in_index_container .button-download input[type=submit] { display: inline-block; padding-left:20px; line-height:16px; background: transparent url('download_icon.png') center left no-repeat; }
+.logged_in_index_container .button-delete input[type=submit] { display: inline-block; padding-left:20px; line-height:16px; background: transparent url('delete_icon.png') center left no-repeat; }
+.logged_in_index_container .button-share input[type=button] { display: inline-block; padding-left:20px; line-height:18px; background: transparent url('share_icon.png') center left no-repeat; }
+.logged_in_index_container #create_folder_button { display: inline-block; padding-left:15px; line-height:11px; background: transparent url('plus-icon.gif') center left no-repeat; padding-top: 4px; }
+/* Icon for folders, files. */
+.logged_in_index_container table tbody td.folder_file { display: inline-block; padding-left:20px; line-height:16px; background: transparent url('folder_icon.png') center left no-repeat; margin-top: 9px; margin-left: 10px; }
+.logged_in_index_container table tbody td.regular_file { display: inline-block; padding-left:20px; line-height:16px; background: transparent url('regular_file_icon.png') center left no-repeat; margin-top: 9px; margin-left: 10px; }
+
+/* Register. */
+.register_container { position: relative; background-image: url('register_container.jpg'); height: 348px; }
+.register_container form { position: absolute; bottom: 28px; left: 148px; }
+.register_container form input:not([type=submit]) { margin-bottom: 7px; }
+.register_container form input[type=submit] { padding-right: 10px; margin-left: 2px; width: 100px; height: 30px; }
+
+/* Login. */
+.login_container { position: relative; background-image: url('login_container.jpg'); height: 348px; }
+.login_container form { position: absolute; bottom: 22px; left: 148px; }
+.login_container form input:not([type=submit]) { margin-bottom: 7px; }
+.login_container form input[type=submit] { padding-right: 10px; margin-left: 2px; width: 100px; height: 30px; }
+.login_container form .remember_me { color: #fff; }
+
+/* -- FOOTER --. */
+.how_it_works_container { position: relative; background-image: url('how_it_works.jpg'); height: 406px; }
+.footer { position: relative; background-image: url('footer_container.jpg'); height: 226px; }
+.footer a { position: absolute; color: #4d6f96; font-size: 24px; font-style: italic; font-family: Myriad Pro, Arial; bottom: 94px; right: 72px; }
+/* Add email icon to anchor. */
+.footer a { display: inline-block; padding-left:35px; line-height:23px; background: transparent url('email_icon.png') center left no-repeat; }
+
+/* -- MISC --. */
+
+.form_errors { font-size: 80% !important; color: red !important; }
+.header a.active { color: #f0c454; }
+
+/* Make an element smoother by adding rounded corners and no border. */
+.border-radius { -moz-border-radius: 7px; -webkit-border-radius: 7px; -khtml-border-radius: 7px; border-radius: 7px; border: none; }
+
+/* Add shadow to button of registering. */
+button.shadow { -o-box-shadow: inset 0 0 3px #000; -moz-box-shadow: inset 0 0 3px #000; -webkit-box-shadow: inset 0 0 3px #000; box-shadow: inset 0 0 3px #000; }
+button:hover { cursor: pointer; cursor: hand; }
+a { text-decoration: none; }
+
+/* Style an input element in a fancy way. */
+input.border-style { border: 1px solid black; padding: 5px; padding-left: 10px; background: rgba(27,26,66,1); color: #fff; }
+input.shadow-style { -o-box-shadow: inset 0 0 3px #000; -moz-box-shadow: inset 0 0 3px #000; -webkit-box-shadow: inset 0 0 3px #000; box-shadow: inset 0 0 3px #000; }
+input.transparent-style { background: transparent; color: #c3c6c7; border: none; font-weight: bold; text-transform: uppercase; }
+input.transparent-style:hover { color: #898e90; }
+
+/* Placeholder coloring. */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #60607b;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #60607b;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #60607b;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #60607b;
+}
+
+/* Clear fix. */
+.group:before, .group:after { content: ""; display: table; }
+.group:after { clear: both; }
+.group { zoom: 1; }

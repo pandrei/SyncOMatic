@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        {% if title %}
+            <title>SyncOMatic - {{title}}</title>
+        {% else %}
+            <title>SyncOMatic</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+    </head>
+    <body>
+        <div id="wrap">
+            {% include "header.html" %}
+            {% block content %}
+            {% endblock %}
+            <div class="how_it_works_container"></div>
+        </div>
+    </body>
+</html>

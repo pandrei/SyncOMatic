@@ -1,0 +1,26 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="login_container group">
+        <form action="{{url_for('login')}}" method="post" name="login">
+            {{form.hidden_tag()}}
+            <p>
+                <span>{{form.email(placeholder="email", class="border-style shadow-style")}}
+                    {% for error in form.errors.email %}
+                        <span class="form_errors">{{error}}</span>
+                    {% endfor %}
+                </span><br>
+
+                <span>{{form.password(placeholder="password", class="border-style shadow-style")}}
+                    {% for error in form.errors.password %}
+                        <span class="form_errors">{{error}}</span>
+                    {% endfor %}
+                </span><br>
+            </p>
+            <p class="remember_me">{{form.remember_me}} Remember Me</p>
+            <p><input class="border-style shadow-style" type="submit" value="LOG IN"></input></p>
+        </form>
+        <a class="click_here" href="{{url_for('register')}}">here</a>
+    </div>
+{% endblock %}
